@@ -1,5 +1,5 @@
 package com.example.projet.model
 
-data class ApiResponse(
+data class PlantsResponse(
     val `data`: List<Plant>,
 )
