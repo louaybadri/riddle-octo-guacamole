@@ -1,15 +1,17 @@
 package com.example.projet.ui.result
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import com.example.projet.databinding.FragmentNotificationsBinding
 
-class NotificationsFragment : Fragment() {
+class ResultFragment : Fragment() {
 
     private var _binding: FragmentNotificationsBinding? = null
 
@@ -17,20 +19,21 @@ class NotificationsFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val notificationsViewModel =
-            ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        val resultViewModel: ResultViewModel by activityViewModels()
+
 
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        resultViewModel.score.observe(viewLifecycleOwner) { resultData ->
+            binding.textResult.text = "You correctly identified ${resultData.correctAnswers} plants out of ${resultData.totalAttempts} attempts!"
         }
         return root
     }

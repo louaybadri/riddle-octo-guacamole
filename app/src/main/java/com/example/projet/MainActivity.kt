@@ -14,7 +14,8 @@ import com.example.projet.databinding.ActivityMainBinding
 import com.example.projet.model.Plant
 import com.example.projet.viewmodel.PlantsViewModel
 
-class MainActivity : AppCompatActivity() {
+class
+MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val plantsViewModel: PlantsViewModel by viewModels()
