@@ -33,8 +33,7 @@ class ResultFragment : Fragment() {
         val root: View = binding.root
 
         resultViewModel.score.observe(viewLifecycleOwner) { resultData ->
-            Log.d("MyTagF", "Correct Answers: ${resultData.correctAnswers}, Total Attempts: ${resultData.totalAttempts}")
-            binding.textResult.text = "${resultData.correctAnswers}/${resultData.totalAttempts}"
+            binding.textResult.text = "You correctly identified ${resultData.correctAnswers} plants out of ${resultData.totalAttempts} attempts!"
         }
         return root
     }

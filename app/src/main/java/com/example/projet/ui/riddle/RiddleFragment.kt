@@ -66,12 +66,7 @@
 
 
             riddleViewModel.currentRiddle.observe(viewLifecycleOwner, Observer { riddle ->
-//                for (i in 0 until binding.radioGroup.childCount) {
-//                    val radioButton = binding.radioGroup.getChildAt(i) as? RadioButton
-//                    radioButton?.setBackgroundColor(Color.TRANSPARENT)
-//                    radioButton?.isEnabled = true
-//                    radioButton?.isChecked = false
-//                }
+
                 resetRadioButtons()
 
 
@@ -96,10 +91,10 @@
                         resultViewModel.updateScore(isCorrect)
 
                         if (isCorrect) {
-                            selectedRadioButton?.setBackgroundColor(Color.GREEN)
+                            selectedRadioButton?.setTextColor(Color.GREEN)
 
                         } else {
-                            selectedRadioButton?.setBackgroundColor(Color.RED)
+                            selectedRadioButton?.setTextColor(Color.RED)
                         }
                         disableRadioGroupExcept(checkedId)
 
@@ -130,7 +125,8 @@
                 val radioButton = binding.radioGroup.getChildAt(i) as? RadioButton
                 radioButton?.isEnabled = true
 //                radioButton?.isChecked = false
-                radioButton?.setBackgroundColor(Color.TRANSPARENT)
+                radioButton?.setTextColor(Color.BLACK)
+
             }
         }
         private fun disableRadioGroupExcept(exceptId: Int) {
