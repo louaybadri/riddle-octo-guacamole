@@ -41,9 +41,8 @@ class RiddleViewModel : ViewModel() {
 
 
     fun setNextRiddle() {
-        // Logic to get three random plants and set the current riddle
         val plantOptions = allPlants.shuffled().take(3)
-        val correctAnswer = plantOptions.random() // Randomly select the correct answer
+        val correctAnswer = plantOptions.random()
 
         _currentRiddle.value = Riddle(correctAnswer, plantOptions)
     }
