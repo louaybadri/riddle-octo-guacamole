@@ -5,6 +5,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface PlantsApi {
-    @GET("plants?token=h0nDnBToSQmqYBVxUJ84uBvxEz7FmuCy66eG1TU3B-I")
+    @GET("plants")
     fun getPlants(): Call<ApiResponse>
 }
