@@ -1,10 +1,10 @@
 package com.example.projet.network
 
-import com.example.projet.model.ApiResponse
-import retrofit2.Call
+import com.example.projet.model.PlantsResponse
+import retrofit2.Response
 import retrofit2.http.GET
 
 interface PlantsApi {
     @GET("plants")
-    fun getPlants(): Call<ApiResponse>
+    suspend fun getPlantsResponse(): Response<PlantsResponse>
 }
