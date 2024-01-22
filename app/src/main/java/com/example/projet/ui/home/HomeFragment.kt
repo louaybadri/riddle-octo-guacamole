@@ -49,7 +49,7 @@ class HomeFragment : Fragment() {
             if (ConnectivityUtils.isInternetAvailable(requireContext())) {
                 // DO SOMETHING HERE
                 val welcomeTextView: TextView = binding.textHome
-                welcomeTextView.text = "Welcome to the Riddle App!"
+                welcomeTextView.text = "Welcome to the Plant List, Plant savvy!"
                 val recyclerView: RecyclerView = binding.recyclerView
                 // Set up RecyclerView
                 val layoutManager = LinearLayoutManager(activity)

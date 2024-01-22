@@ -71,6 +71,7 @@ class DashboardFragment : Fragment() {
                 lifecycleScope.launch {
                     val selectedRadioButton =
                         binding.radioGroup.findViewById<RadioButton>(checkedId)
+                    selectedRadioButton?.isChecked = false
                     val isCorrect = selectedRadioButton?.text == riddle.correctAnswer.common_name
                     resultViewModel.updateScore(isCorrect)
                     if (isCorrect) {
@@ -91,8 +92,8 @@ class DashboardFragment : Fragment() {
         for (i in 0 until binding.radioGroup.childCount) {
             val radioButton = binding.radioGroup.getChildAt(i) as? RadioButton
             radioButton?.isEnabled = true
-                radioButton?.isChecked = false
-            radioButton?.setTextColor(Color.BLACK)
+//                radioButton?.isChecked = false
+            radioButton?.setTextColor(Color.WHITE)
         }
     }
 
