@@ -13,7 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="50dp"
         android:textAlignment="center"
+        android:textColor="@android:color/white"
         android:textSize="25sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,13 +25,13 @@
 
     <Button
         android:id="@+id/reset_button"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
+        android:layout_width="180dp"
+        android:layout_height="53dp"
+        android:background="@color/green"
         android:text="Reset"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_result"
         app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_result" />
 </androidx.constraintlayout.widget.ConstraintLayout>

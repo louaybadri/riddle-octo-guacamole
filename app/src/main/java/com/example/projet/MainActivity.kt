@@ -22,6 +22,7 @@ MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
 
         plantsViewModel.getAllPlants()
         binding = ActivityMainBinding.inflate(layoutInflater)

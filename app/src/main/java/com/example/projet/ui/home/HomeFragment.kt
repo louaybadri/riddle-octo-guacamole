@@ -42,7 +42,7 @@ class HomeFragment : Fragment() {
 
         lifecycleScope.launch {
             val welcomeTextView: TextView = binding.textHome
-            welcomeTextView.text = "Welcome to the Riddle App!"
+            welcomeTextView.text = "Welcome to the Plant List, Plant savvy!"
 
             // Set up RecyclerView
             val layoutManager = LinearLayoutManager(activity)
