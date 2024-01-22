@@ -27,15 +27,7 @@ class ResultViewModel(application: Application) : AndroidViewModel(application) 
 
     val score: LiveData<ResultData> = _score
 
-
-
-
-
-
-
-
-
-    fun setScore(resultData: ResultData) {
+    private fun setScore(resultData: ResultData) {
         // Only update if the new score is different
         if (_score.value != resultData) {
             // Update LiveData
