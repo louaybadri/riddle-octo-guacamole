@@ -4,8 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wooden"
+    android:padding="20dp"
+    android:textAlignment="center"
+
     tools:context=".ui.riddle.DashboardFragment"
-    android:padding="20dp">
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="80dp">
 
     <TextView
         android:id="@+id/text_dashboard"
@@ -18,35 +23,35 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.34" />
+        app:layout_constraintVertical_bias="0.543" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to the octo riddle"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/plantImage"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Welcome to the octo riddle, can you guess the plant?"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/plantImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/plantImage"
+        android:layout_width="282dp"
+        android:layout_height="191dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/ic_home_black_24dp"
         app:layout_constraintBottom_toTopOf="@+id/text_dashboard"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:layout_marginBottom="8dp"
-        android:layout_width="match_parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
         android:id="@+id/button"
@@ -64,38 +69,57 @@
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_border"
+        android:layout_width="320dp"
+        android:layout_height="160dp"
+        app:flow_verticalGap="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/plantImage">
+        app:layout_constraintTop_toTopOf="@+id/plantImage"
+        app:layout_constraintVertical_bias="0.645">
 
         <RadioButton
 
             android:id="@+id/radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+
+            android:background="@drawable/rounded_border"
             android:text="RadioButton"
-            app:buttonTint="@drawable/custom_radio_button"
-            />
+            android:textAlignment="center"
+
+
+            android:textColor="@android:color/white"
+            app:buttonTint="#00000000" />
 
         <RadioButton
 
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+
+            android:background="@drawable/rounded_border"
             android:text="RadioButton"
-            app:buttonTint="@drawable/custom_radio_button" />
+            android:textAlignment="center"
+
+            android:textColor="@android:color/white"
+            app:buttonTint="#0000" />
 
         <RadioButton
 
             android:id="@+id/radioButton3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:background="@drawable/rounded_border"
             android:text="RadioButton"
-            app:buttonTint="@drawable/custom_radio_button" />
+
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            app:buttonTint="#0000" />
 
     </RadioGroup>
 
