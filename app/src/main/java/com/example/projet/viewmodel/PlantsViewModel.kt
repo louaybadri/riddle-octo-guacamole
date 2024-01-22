@@ -25,6 +25,7 @@ object PlantsViewModel : ViewModel() {
             plantsMutableLiveData.value?.forEach {
                 Log.v("P", it.toString())
             }
+
         }
     }
 }

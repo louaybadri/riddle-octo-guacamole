@@ -17,7 +17,9 @@ class ResultViewModel(application: Application) : AndroidViewModel(application) 
 
     private val _score = MutableLiveData<ResultData>()
     init {
-        // Retrieve previous results from SharedPreferences
+        initialize()
+    }
+    fun initialize() {
         val correctAnswers = sharedPreferences.getInt("correctAnswers", 0)
         val totalAttempts = sharedPreferences.getInt("totalAttempts", 0)
         _score.value = ResultData(correctAnswers, totalAttempts)

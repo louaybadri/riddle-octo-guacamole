@@ -9,7 +9,7 @@ import android.widget.Toast
 object ConnectivityUtils {
 
     fun isInternetAvailable(context: Context): Boolean {
-        var result = false
+        var result: Boolean
         val connectivityManager =
             context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkCapabilities = connectivityManager.activeNetwork ?: return false
@@ -24,15 +24,17 @@ object ConnectivityUtils {
 
         return result
     }
-    fun handleNoInternetConnection(context: Context) {
+    fun handleNoInternetConnection(context: Context,firstTime:Boolean) {
         // Handle the case where there is no internet connection
         // This method can be customized based on your app's requirements
-        Toast.makeText(context, "No Internet Connection", Toast.LENGTH_SHORT).show()
+        if(firstTime) {
+            Toast.makeText(context, "No Internet Connection", Toast.LENGTH_SHORT).show()
 
-//        val builder = AlertDialog.Builder(context)
-//        builder.setTitle("No Internet Connection")
-//            .setMessage("Please check your internet connection and try again.")
-//            .setPositiveButton("OK") { _, _ -> /* Handle OK button click if needed */ }
-//            .show()
+            val builder = AlertDialog.Builder(context)
+            builder.setTitle("No Internet Connection")
+                .setMessage("Please check your internet connection and try again.")
+                .setPositiveButton("OK") { _, _ -> /* Handle OK button click if needed */ }
+                .show()
+        }
     }
 }

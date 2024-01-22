@@ -15,11 +15,19 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.example.projet.ui.riddle.DashboardFragment"
         android:label="@string/title_riddle"
-        tools:layout="@layout/fragment_riddle" />
+        tools:layout="@layout/fragment_riddle" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.projet.ui.result.ResultFragment"
         android:label="@string/title_result"
-        tools:layout="@layout/fragment_result" />
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_navigation_notifications_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 </navigation>
