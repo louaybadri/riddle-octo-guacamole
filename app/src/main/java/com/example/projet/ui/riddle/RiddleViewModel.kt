@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.projet.model.Plant
 import com.example.projet.model.Riddle
+import com.example.projet.viewmodel.PlantsViewModel
 
 class RiddleViewModel : ViewModel() {
     private var correctAnswers = 0
@@ -18,21 +19,7 @@ class RiddleViewModel : ViewModel() {
 
 
 
-    private val allPlants: List<Plant> = listOf(
-
-        Plant(1, "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png?fbclid=IwAR2q_zQ2lZ2TY3x2xzSYVc7V9e-asxEuJcawPWUEXe5ka17-45IQDbn78EU", "Plant A"),
-        Plant(2, "https://bs.plantnet.org/image/o/db3b1d70fed25a0c1a16ba5bf9ee79d980a510e9", "Plant B"),
-        Plant(3, "https://bs.plantnet.org/image/o/db3b1d70fed25a0c1a16ba5bf9ee79d980a510e9", "Plant C"),
-        Plant(1, "https://bs.plantnet.org/image/o/db3b1d70fed25a0c1a16ba5bf9ee79d980a510e9", "Plant AA"),
-        Plant(2, "https://bs.plantnet.org/image/o/db3b1d70fed25a0c1a16ba5bf9ee79d980a510e9", "Plant BB"),
-        Plant(3, "https://bs.plantnet.org/image/o/db3b1d70fed25a0c1a16ba5bf9ee79d980a510e9", "Plant CC"),
-        Plant(1, "https://bs.plantnet.org/image/o/db3b1d70fed25a0c1a16ba5bf9ee79d980a510e9", "Plant AAA"),
-        Plant(2, "https://bs.plantnet.org/image/o/db3b1d70fed25a0c1a16ba5bf9ee79d980a510e9", "Plant BBB"),
-        Plant(3, "https://bs.plantnet.org/image/o/db3b1d70fed25a0c1a16ba5bf9ee79d980a510e9", "Plant CCC"),
-        Plant(1, "https://bs.plantnet.org/image/o/db3b1d70fed25a0c1a16ba5bf9ee79d980a510e9", "Plant AAAAA"),
-        Plant(2, "https://bs.plantnet.org/image/o/db3b1d70fed25a0c1a16ba5bf9ee79d980a510e9", "Plant BBBBB"),
-        Plant(3, "https://bs.plantnet.org/image/o/db3b1d70fed25a0c1a16ba5bf9ee79d980a510e9", "Plant CCCCC"),
-    )
+    private val allPlants: List<Plant> = PlantsViewModel.plants.value ?: emptyList()
 
 
     fun setNextRiddle() {

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.riddle.DashboardFragment">
+    tools:context=".ui.riddle.DashboardFragment"
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/text_dashboard"
@@ -26,20 +27,26 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="welcome to the octo riddle"
+        android:text="Welcome to the octo riddle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/plantImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="110dp"
         tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
         android:id="@+id/plantImage"
-        android:layout_width="169dp"
-        android:layout_height="153dp"
         android:src="@drawable/ic_home_black_24dp"
         app:layout_constraintBottom_toTopOf="@+id/text_dashboard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"/>
 
     <Button
         android:id="@+id/button"
@@ -71,7 +78,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RadioButton"
-            app:buttonTint="@drawable/custom_radio_button" />
+            app:buttonTint="@drawable/custom_radio_button"
+            />
 
         <RadioButton
 

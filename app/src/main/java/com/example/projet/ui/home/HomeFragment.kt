@@ -8,12 +8,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projet.databinding.FragmentHomeBinding
 import com.example.projet.dummy_data.DUMMY
 import com.example.projet.ui.utils.ConnectivityUtils
+import com.example.projet.viewmodel.PlantsViewModel
 
 class HomeFragment : Fragment() {
 
@@ -23,6 +25,7 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    private val plantsViewModel: PlantsViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -51,8 +54,9 @@ class HomeFragment : Fragment() {
                 // Set up RecyclerView
                 val layoutManager = LinearLayoutManager(activity)
                 recyclerView.layoutManager = layoutManager
-                val adapter = PlantAdapter(DUMMY.plantList)
-                recyclerView.adapter = adapter
+                plantsViewModel.plants.observe(viewLifecycleOwner) {
+                    recyclerView.adapter = it?.let { it1 -> PlantAdapter(it1) }
+                }
             } else {
                 ConnectivityUtils.handleNoInternetConnection(requireContext())
                 handler.postDelayed({ refresh(millisecton) }, millisecton)

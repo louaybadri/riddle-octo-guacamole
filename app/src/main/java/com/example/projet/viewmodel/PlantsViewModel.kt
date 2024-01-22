@@ -9,7 +9,7 @@ import com.example.projet.model.Plant
 import com.example.projet.repository.PlantsRepository
 import kotlinx.coroutines.launch
 
-class PlantsViewModel : ViewModel() {
+object PlantsViewModel : ViewModel() {
     private val plantsMutableLiveData = MutableLiveData<ArrayList<Plant>?>()
     private val plantsRepository = PlantsRepository
     val plants: LiveData<ArrayList<Plant>?> = plantsMutableLiveData

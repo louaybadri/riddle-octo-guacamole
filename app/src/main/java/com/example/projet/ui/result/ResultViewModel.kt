@@ -62,4 +62,7 @@ class ResultViewModel(application: Application) : AndroidViewModel(application) 
         // Update the score using the setScore function
         setScore(newScore)
     }
+    fun resetScore() {
+        setScore(ResultData(0, 0))
+    }
 }

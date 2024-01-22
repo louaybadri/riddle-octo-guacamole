@@ -18,7 +18,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         val apiKey = gradleLocalProperties(rootDir).getProperty("API_KEY")
         buildConfigField("String", "BASE_URL", "\"https://trefle.io/api/v1/\"")
-        buildConfigField("String", "API_KEY", apiKey ?: "")
+        buildConfigField("String", "API_KEY", apiKey ?: "\"h0nDnBToSQmqYBVxUJ84uBvxEz7FmuCy66eG1TU3B-I\"")
     }
 
     buildTypes {

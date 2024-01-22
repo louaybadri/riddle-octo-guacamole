@@ -15,11 +15,11 @@
         android:id="@+id/navigation_dashboard"
         android:name="com.example.projet.ui.riddle.DashboardFragment"
         android:label="@string/title_riddle"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_riddle" />
 
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.projet.ui.result.ResultFragment"
         android:label="@string/title_result"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_result" />
 </navigation>
