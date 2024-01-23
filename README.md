@@ -25,24 +25,24 @@ Nous avons incorporé les design patterns suivants pour améliorer la structure 
 
 ### 1. Liste des Plantes
 - Affichage d'une liste de plantes avec des détails tels que le nom, l'image.
-![[page1.png]]
+![page1](page1.png)
 
 ### 2. Quiz sur les Plantes
 - Affichage d'une image de plante avec trois choix de noms possibles.
 - Validation en temps réel des réponses avec un retour visuel.
 - Suivi du score pendant le quiz.
-![[page2.png]]
+![page2](page2.png)
 
 ### 3. Résultats du Quiz
 - Affichage du score et des réponses correctes et incorrectes.
 - Possibilité de reinitialiser le score.
-![[page3.png]]
+![page3](page3.png)
 
 ## Gestion des Erreurs de Connexion
 - Détection automatique de l'absence de connexion Internet.
 - Messages d'erreur clairs et informatifs pour informer l'utilisateur.
 - Automatisation du rafraîchissement de la page lorsqu'une reconnexion est détectée.
-![[page4.png]]
+![page4](page4.png)
 
 ## Comment exécuter l'application
 1. Clonez le dépôt : 
